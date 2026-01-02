@@ -87,4 +87,20 @@ Essa arquitetura promove:
 ---
 
 ## 📂 Estrutura do Projeto (Monorepo)
+```text
+foodtech-fraud-alerts/
+│
+├── api-service/          # Microserviço Spring Boot responsável pela ingestão de alertas de fraude
+│   ├── src/main/java     # Código-fonte da aplicação
+│   ├── src/main/resources# Configurações (application.yml)
+│   └── pom.xml           # Gerenciamento de dependências (Maven)
+│
+├── worker-service/       # (Roadmap) Serviço consumidor de mensagens para processamento assíncrono
+├── infra/                # (Roadmap) Infraestrutura como Código (Terraform)
+├── docker-compose.yml    # (Roadmap) Ambiente local com PostgreSQL/LocalStack
+│
+├── README.md             # Documentação técnica do projeto
+├── LICENSE               # Licença do projeto
+└── .gitignore            # Arquivos ignorados pelo Git
+
 
