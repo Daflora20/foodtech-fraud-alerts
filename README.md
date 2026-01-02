@@ -8,11 +8,12 @@ O projeto demonstra como projetar, desenvolver e operar um **microserviço desac
 
 ## 📌 Contexto do Problema
 
-Em sistemas de grande volume, eventos sensíveis como **alertas de fraude** não devem ser processados de forma síncrona, pois isso pode impactar desempenho, escalabilidade e experiência do usuário.
+Em sistemas que processam grandes volumes de dados, tratar alertas críticos (como fraude) de forma imediata pode deixar tudo mais lento e prejudicar a experiência do usuário.  
 
-Para mitigar esse problema, este serviço adota uma abordagem **assíncrona e orientada a eventos**, permitindo que a ingestão do alerta seja desacoplada do processamento, garantindo maior resiliência e tolerância a falhas.
-
----
+Para evitar isso, adotamos um modelo **assíncrono e orientado a eventos**:  
+- O alerta é enviado separado do processamento  
+- O sistema ganha **velocidade, escalabilidade e resiliência**  
+- Continua funcionando mesmo diante de falhas  
 
 ## 👥 Cliente do Serviço (Client System)
 
