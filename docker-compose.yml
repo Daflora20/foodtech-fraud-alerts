@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: foodtech-postgres
+    environment:
+      POSTGRES_DB: foodtech
+      POSTGRES_USER: foodtech
+      POSTGRES_PASSWORD: foodtech
+    ports:
+      - "5432:5432"
