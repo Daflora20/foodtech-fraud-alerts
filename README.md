@@ -1,8 +1,26 @@
 # 🚨 foodtech-fraud-alerts
+![Java](https://img.shields.io/badge/Java-21-red?logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-brightgreen?logo=springboot&logoColor=white)
+![Spring Web](https://img.shields.io/badge/Spring%20Web-REST-brightgreen?logo=spring&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Orchestration-2496ED?logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazonaws&logoColor=white)
+![SQS](https://img.shields.io/badge/Amazon%20SQS-Messaging-orange?logo=amazonaws&logoColor=white)
+![Event Driven](https://img.shields.io/badge/Architecture-Event--Driven-purple)
+![REST API](https://img.shields.io/badge/API-REST-lightgrey)
+![Maven](https://img.shields.io/badge/Maven-Build-C71A36?logo=apachemaven&logoColor=white)
+![Git](https://img.shields.io/badge/Git-Version%20Control-F05032?logo=git&logoColor=white)
 
 Microserviço **back-end em Java** projetado para o **processamento assíncrono de alertas de fraude**, utilizando **Spring Boot**, conceitos de **Cloud AWS**, **arquitetura orientada a eventos** e **boas práticas de sistemas distribuídos**.
 
 O projeto demonstra como **projetar, desenvolver e operar um microserviço desacoplado, confiável e escalável**, comum em plataformas digitais de **alta escala**, como **foodtechs, marketplaces e sistemas financeiros**.
+
+---
+
+## 🏗️ Arquitetura AWS (Event-Driven)
+
+![Arquitetura AWS](docs/images/achitectecture-event-driven.png)
 
 ---
 
